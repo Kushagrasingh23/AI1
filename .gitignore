@@ -1,0 +1,44 @@
+# Node
+node_modules
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.idea/
+.DS_Store
+.env
+.env.local
+.env.*.local
+.next/
+dist/
+build/
+coverage/
+.vscode/
+.out/
+*.tsbuildinfo
+
+# Logs
+logs
+*.log
+
+# Docker
+**/.dockerignore
+**/Dockerfile*
+*.cache
+
+# Output
+.out
+.vercel
+
+# Jest
+jest-html-reporters-*.html
+
+# VSCode
+.history
+
+# Prisma (if added later)
+prisma/*.db
+
+# Generated
+**/.next
+**/.turbo

@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #0b0f17;
+  --fg: #e6f0ff;
+}
+
+html, body, #__next {
+  height: 100%;
+}
+
+body {
+  background: radial-gradient(ellipse at top, rgba(138,43,226,0.12), transparent 40%),
+              radial-gradient(ellipse at bottom, rgba(0,255,255,0.08), transparent 40%),
+              var(--bg);
+  color: var(--fg);
+}
+
+.neon-card {
+  @apply bg-black/30 backdrop-blur-md rounded-xl border border-white/10 shadow-neon;
+}
+
+.neon-button {
+  @apply px-5 py-3 rounded-lg text-white font-semibold bg-gradient-to-r from-neon-purple to-neon-cyan shadow-neon hover:brightness-110 transition;
+}
+
+.link {
+  @apply text-neon-cyan hover:text-neon-pink transition underline underline-offset-4;
+}

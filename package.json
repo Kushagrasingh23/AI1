@@ -1,0 +1,31 @@
+{
+  "name": "ai-influencer-monorepo",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "apps/web",
+    "apps/server"
+  ],
+  "scripts": {
+    "dev": "npm run dev -w apps/web",
+    "dev:server": "npm run dev -w apps/server",
+    "dev:all": "concurrently \"npm:dev -w apps/web\" \"npm:dev -w apps/server\"",
+    "build": "npm run build -w apps/web && npm run build -w apps/server",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "test": "npm run test -w apps/web"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^7.18.0",
+    "@typescript-eslint/parser": "^7.18.0",
+    "concurrently": "^8.2.2",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-react": "^7.35.0",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "prettier": "^3.3.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4"
+  }
+}
